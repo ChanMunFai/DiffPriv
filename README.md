@@ -6,5 +6,4 @@
 
 The Mathematical formula for DCAP functions are : 
 
-![DCAP formula 1]
-(https://github.com/MUNFAI15/DiffPriv/blob/master/DCAP1.png)
+![DCAP formula 1](https://github.com/MUNFAI15/DiffPriv/blob/master/DCAP1.png)
