@@ -77,18 +77,20 @@ is.integer0 <- function(x){
 
 
 ROC_numeric <- function(data1, data2, x, y = 2500 , num_cat=2000){
-  df_freq <- tabyl(HDB_complete, (x))
+  # x is the individual column we want to run the ROC score on 
+  # x will be rounded to the nearest y 
+  df_freq <- tabyl(data1, (x))
   df_freq[[x]] <- round_any(as.numeric(df_freq[[x]]), y)
   df_freq <- data.frame(aggregate(cbind(df_freq$n, df_freq$percent), by = list(df_freq[[x]]), FUN = sum))
   colnames(df_freq) <- c(paste(x), "n", "percent")
 
-  dfsyn_freq <- tabyl(HDB_syn1$syn, (x))
+  dfsyn_freq <- tabyl(data2, (x))
   dfsyn_freq[[x]] <- round_any(as.numeric(dfsyn_freq[[x]]), y) 
   dfsyn_freq <- data.frame(aggregate(cbind(dfsyn_freq$n, dfsyn_freq$percent), by = list(dfsyn_freq[[x]]), FUN = sum))
   colnames(dfsyn_freq) <- c(paste(x), "n", "percent")
 
   if (nrow(df_freq) <= num_cat){
-    df_combined <- merge(df_freq, dfsyn_freq, by = "GrantAmount", all = TRUE) ## merge by row name which is every single individual value of a row 
+    df_combined <- merge(df_freq, dfsyn_freq, by = 0, all = TRUE) ## merge by row name which is every single individual value of a row 
     if(nrow(df_combined) <= num_cat){
       df_combined$min <- pmin(df_combined[c('percent.x')], df_combined[c('percent.y')])
       df_combined$max <- pmax(df_combined[c('percent.x')], df_combined[c('percent.y')])

@@ -1,8 +1,6 @@
 library(readr)
 library(tidyverse)
 
-# rm(list = ls()) # to clean out workspace
-
 CAP_original <- function(dataframe, key_variable, target_variable) {
   ### return the CAP score for an original dataset 
   key_freq <- plyr::count(dataframe, key_variable)
@@ -63,7 +61,8 @@ CAP_synthetic <- function(dataframe, synthetic_dataframe, key_variable, target_v
 }
 
 CAP_original_num <- function(dataframe, key_variable, target_variable, y = 2500) {
-  ### return the CAP score for an original dataset where target_variable is numeric 
+  ### return the CAP score for an original dataset where target_variable is numeric
+  ## select y to round the target variable to the nearest y 
   dataframe[[target_variable]] <- round_any(as.numeric(dataframe[[target_variable]]), y) 
   key_freq <- plyr::count(dataframe, key_variable)
   target_key_freq <- plyr::count(dataframe, c(key_variable, target_variable))
@@ -79,6 +78,7 @@ CAP_original_num <- function(dataframe, key_variable, target_variable, y = 2500)
 
 CAP_synthetic_num <- function(dataframe, synthetic_dataframe, key_variable, target_variable, y = 2500){
   ### return the CAP score for a synthetic dataset 
+  ## select y to round the target variable to the nearest y 
   dataframe[[target_variable]] <- round_any(as.numeric(dataframe[[target_variable]]), y) 
   key_freq <- plyr::count(dataframe, key_variable)
   target_key_freq <- plyr::count(dataframe, c(key_variable, target_variable))
