@@ -6,12 +6,3 @@
 
 **ROC compiled** provides functions to provide the Ratio of Counts (ROC) score as given by Taub, J., Elliot, M., & Raab, G. (2019). Creating the Best Risk-Utility Profile : The Synthetic Data Challenge.
 
-### The Mathematical formula for DCAP functions are : 
-
-![DCAP formula 1](https://github.com/MUNFAI15/DiffPriv/blob/master/DCAP1.png)
-
-![DCAP formula 2](https://github.com/MUNFAI15/DiffPriv/blob/master/DCAP2.png)
-
-
-### The Mathematical formula for ROC score is : 
-![ROC Score](https://github.com/MUNFAI15/DiffPriv/blob/master/ROC.png)
