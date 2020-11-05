@@ -1,6 +1,6 @@
 # DiffPriv
 
-**Comparative Metrics Framework.pdf** provides a comprehensive and intuitive framework to evaluate the performance of any synthetic dataset vis-à-vis its original dataset and other synthetic datasets. It captures information on the tradeoff between general utility, specific utility and risk disclosure. 
+[**Comparative Metrics Framework.pdf**](https://github.com/MUNFAI15/DiffPriv/blob/master/comparative%20metrics%20framework.pdf) provides a comprehensive and intuitive framework to evaluate the performance of any synthetic dataset vis-à-vis its original dataset and other synthetic datasets. It captures information on the tradeoff between general utility, specific utility and risk disclosure. 
 
 > Motivation: Whilst researching on the best data synthesis method, I struggled with finding suitable benchmarks to evaluate the quality of synthetic datasets. Taub et al.'s work on this is highly excellent, but was not easily reproducible. 
 >
