@@ -2,8 +2,11 @@
 
 **Comparative Metrics Framework.pdf** provides a comprehensive and intuitive framework to evaluate the performance of any synthetic dataset vis-à-vis its original dataset and other synthetic datasets. It captures information on the tradeoff between general utility, specific utility and risk disclosure. 
 
-For code on the ROC and CAP functions, refer to the package [**cmf**](https://github.com/MUNFAI15/cmf).
+> Motivation: Whilst researching on the best data synthesis method, I struggled with finding suitable benchmarks to evaluate the quality of synthetic datasets. Taub et al.'s work on this is highly excellent, but was not easily reproducible. 
 
+> I coded previously publicly unavailable functions on ROC and DCAP in the package **cmf**. 
+
+For code on the ROC and CAP functions as well as their usage examples, refer to the package [**cmf**](https://github.com/MUNFAI15/cmf).
 
 **DCAP functions** provides functions to calculate the Correct Attribution Probabilbility (CAP) score as given by Taub, J., Elliot, M., Pampaka, M., &amp; Smith, D. (2018). Differential Correct Attribution Probability for Synthetic Data: An Exploration. Privacy in Statistical Databases Lecture Notes in Computer Science, 122-137. doi:10.1007/978-3-319-99771-1_9
 
