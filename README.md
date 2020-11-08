@@ -33,6 +33,11 @@ ROC_list(df, synthpop_df)
 ROC_indiv(df, synthpop_df, "disp")
 ROC_score(df, synthpop_df)
 ROC_numeric(df, synthpop_df, "disp", y=2)
+
+### Propensity Scores 
+key_var <-("cyl")
+synthpop::utility.tab(syn1, df, key_var)
+> Voas Williamson (VW): 2.04 # This is the most relevant result. 
 ```
 #### Specific Utility 
 Specific utility evaluates the extent to which we can use our synthetic dataset to gain the same statistical inference as if we were using the original dataset. 
