@@ -16,7 +16,7 @@ Here is a high-level overview of the comparative metrics framework.
 ![Screenshot](https://github.com/MUNFAI15/DiffPriv/blob/master/CMF%20Overview.png)
 
 ### Usage Examples 
-To install **cmf**, 
+To install **cmf**
 ```bash
 devtools::install_github("MUNFAI15/cmf")
 ```
