@@ -34,9 +34,9 @@ ROC_indiv(df, synthpop_df, "disp")
 ROC_score(df, synthpop_df)
 ROC_numeric(df, synthpop_df, "disp", y=2)
 ```
-### Specific Utility 
+#### Specific Utility 
 
-### Disclosure Risk 
+#### Disclosure Risk 
 ```bash
 key_var <- c("cyl", "gear")
 target_var <- c("wt", "carb")
@@ -47,9 +47,5 @@ CAP_baseline(df, target_var)
 CAP_synthetic(df, synthpop_df, key_var, target_var)
 ```
 
-
-[**DCAP functions**](https://github.com/MUNFAI15/DiffPriv/blob/master/DCAP%20functions.R) provides functions to calculate the Correct Attribution Probabilbility (CAP) score as given by Taub, J., Elliot, M., Pampaka, M., &amp; Smith, D. (2018). Differential Correct Attribution Probability for Synthetic Data: An Exploration. Privacy in Statistical Databases Lecture Notes in Computer Science, 122-137. doi:10.1007/978-3-319-99771-1_9
-
-[**ROC compiled**](https://github.com/MUNFAI15/DiffPriv/blob/master/ROC_compiled.R) provides functions to provide the Ratio of Counts (ROC) score as given by Taub, J., Elliot, M., & Raab, G. (2019). Creating the Best Risk-Utility Profile : The Synthetic Data Challenge.
 
 Author : Chan Mun Fai 
