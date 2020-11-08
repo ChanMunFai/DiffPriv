@@ -1,4 +1,4 @@
-# DiffPriv
+# Comparative Metrics Framework in R to evaluate the quality of synthetic data
 
 [**Comparative Metrics Framework.pdf**](https://github.com/MUNFAI15/DiffPriv/blob/master/comparative%20metrics%20framework.pdf) provides a comprehensive and intuitive framework to evaluate the performance of any synthetic dataset vis-à-vis its original dataset and other synthetic datasets. It captures information on the tradeoff between **general utility, specific utility** and **disclosure risk**. 
 
