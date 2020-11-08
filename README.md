@@ -26,7 +26,7 @@ syn1 <- syn(df, seed = 1234)
 synthpop_df <- syn1$syn
 ```
 #### General Utility 
-
+General utility is the degree of similarity in statistical distributions between the original and synthetic dataset. 
 ```bash
 ### ROC 
 ROC_list(df, synthpop_df)
@@ -35,8 +35,11 @@ ROC_score(df, synthpop_df)
 ROC_numeric(df, synthpop_df, "disp", y=2)
 ```
 #### Specific Utility 
+Specific utility evaluates the extent to which we can use our synthetic dataset to gain the same statistical inference as if we were using the original dataset. 
 
 #### Disclosure Risk 
+Disclosure risk evaluates the probability of disclosing confidential information about individuals in the dataset. 
+
 ```bash
 key_var <- c("cyl", "gear")
 target_var <- c("wt", "carb")
