@@ -28,19 +28,27 @@ synthpop_df <- syn1$syn
 #### General Utility 
 General utility is the degree of similarity in statistical distributions between the original and synthetic dataset. 
 ```bash
-### ROC 
+### ROC - a higher score denotes better overlap. 
 ROC_list(df, synthpop_df)
 ROC_indiv(df, synthpop_df, "disp")
 ROC_score(df, synthpop_df)
 ROC_numeric(df, synthpop_df, "disp", y=2)
 
-### Propensity Scores 
-key_var <-("cyl")
+### Propensity Scores - a lower score denotes better overlap. 
+key_var <-("cyl") 
 synthpop::utility.tab(syn1, df, key_var)
 > Voas Williamson (VW): 2.04 # This is the most relevant result. 
 ```
 #### Specific Utility 
 Specific utility evaluates the extent to which we can use our synthetic dataset to gain the same statistical inference as if we were using the original dataset. 
+
+```bash 
+### CIO - a higher score denotes better performance. 
+lm1 <- lm(formula = cyl ~ gear + wt + carb , data = df)
+synfit1 <- lm.synds(data = syn1, cyl ~ gear + wt + carb)
+compare(synfit1, df)
+summary(synfit1)
+```
 
 #### Disclosure Risk 
 Disclosure risk evaluates the probability of disclosing confidential information about individuals in the dataset. 
@@ -49,7 +57,7 @@ Disclosure risk evaluates the probability of disclosing confidential information
 key_var <- c("cyl", "gear")
 target_var <- c("wt", "carb")
 
-### CAP 
+### CAP - a lower score denotes better disclosure risk. 
 CAP_original(df, key_var, target_var)
 CAP_baseline(df, target_var)
 CAP_synthetic(df, synthpop_df, key_var, target_var)
